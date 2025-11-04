@@ -2,6 +2,8 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
 
+# These lines MUST have the leading dots
+# Use absolute imports from the 'app' package
 from app.models import SymptomRequest, SpecialtyRecommendation, Provider
 from app.services import get_specialty_recommendation, get_providers_by_specialty
 

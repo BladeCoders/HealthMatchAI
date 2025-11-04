@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 from typing import List
 import logging
 
+# NEW
+# Use absolute import from the 'app' package
 from app.models import Provider, SpecialtyRecommendation
 
 # --- Configuration ---
@@ -31,7 +33,7 @@ generation_config = {
 }
 
 model = genai.GenerativeModel(
-    model_name="gemini-pro",
+    model_name="gemini-2.5-flash",
     generation_config=generation_config,
 )
 
