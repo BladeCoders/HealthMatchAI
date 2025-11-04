@@ -1,0 +1,164 @@
+/* Plain CSS for the home component */
+:host {
+  display: block;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.search-box {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+  .search-box h2 {
+    margin-top: 0;
+  }
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  font-family: inherit;
+  resize: vertical;
+  box-sizing: border-box; /* Important for padding */
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+  button.primary {
+    background-color: #007aff;
+    color: white;
+  }
+
+    button.primary:hover:not(:disabled) {
+      background-color: #0056b3;
+    }
+
+  button.secondary {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+
+    button.secondary:hover:not(:disabled) {
+      background-color: #ccc;
+    }
+
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+/* --- Results --- */
+.results-container {
+  margin-top: 32px;
+}
+
+.error-box {
+  border: 1px solid #d9534f;
+  background-color: #f2dede;
+  color: #a94442;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+  .error-box p {
+    margin: 8px 0 0;
+    font-size: 0.9em;
+  }
+
+.recommendation-section {
+  margin-bottom: 32px;
+}
+
+.reasoning {
+  font-style: italic;
+  color: #555;
+  border-left: 3px solid #007aff;
+  padding-left: 12px;
+}
+
+.specialty-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.specialty-tag {
+  padding: 10px 16px;
+  font-size: 0.95em;
+  border: 1px solid #007aff;
+  background-color: #f0f7ff;
+  color: #007aff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+  .specialty-tag:hover:not(:disabled) {
+    background-color: #e0f0ff;
+  }
+
+  .specialty-tag.selected {
+    background-color: #007aff;
+    color: white;
+  }
+
+.provider-section {
+  margin-top: 24px;
+}
+
+.provider-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
+}
+
+/* Simple CSS Loader */
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

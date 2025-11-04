@@ -2,50 +2,213 @@
   {
     "id": 101,
     "name": "Dr. Sarah Connor",
-    "specialty": "Orthopedist",
+    "specialty": "Orthopedics",
     "location": "Downtown Medical Center",
-    "availability": [ "2025-11-10T09:00:00Z", "2025-11-10T11:30:00Z", "2025-11-12T14:00:00Z" ]
+    "availability": [
+      "2025-11-10T09:00:00Z",
+      "2025-11-10T11:30:00Z",
+      "2025-11-12T14:00:00Z"
+    ]
   },
   {
     "id": 102,
     "name": "Dr. John Kim",
-    "specialty": "Orthopedist",
+    "specialty": "Orthopedics",
     "location": "Uptown Specialty Clinic",
-    "availability": [ "2025-11-11T10:00:00Z", "2025-11-13T15:00:00Z" ]
+    "availability": [
+      "2025-11-11T10:00:00Z",
+      "2025-11-13T15:00:00Z"
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Dr. Alex Taylor",
+    "specialty": "Sports Medicine",
+    "location": "Victory Sports & Spine",
+    "availability": [
+      "2025-11-10T10:00:00Z",
+      "2025-11-11T14:30:00Z"
+    ]
+  },
+  {
+    "id": 111,
+    "name": "Dr. Maria Gibson",
+    "specialty": "Sports Medicine",
+    "location": "CityView Health",
+    "availability": [
+      "2025-11-13T09:00:00Z",
+      "2025-11-14T11:00:00Z",
+      "2025-11-14T11:30:00Z"
+    ]
   },
   {
     "id": 201,
     "name": "Dr. Elena Rodriguez",
     "specialty": "Rheumatologist",
     "location": "Downtown Medical Center",
-    "availability": [ "2025-11-12T09:30:00Z", "2025-11-14T11:00:00Z" ]
+    "availability": [
+      "2025-11-12T09:30:00Z",
+      "2025-11-14T11:00:00Z"
+    ]
   },
   {
     "id": 202,
     "name": "Dr. Michael Chen",
     "specialty": "Rheumatologist",
     "location": "CityView Health",
-    "availability": [ "2025-11-10T13:00:00Z", "2025-11-11T16:00:00Z" ]
+    "availability": [
+      "2025-11-10T13:00:00Z",
+      "2025-11-11T16:00:00Z"
+    ]
   },
   {
     "id": 301,
     "name": "David Lee, PT",
     "specialty": "Physiotherapist",
     "location": "Uptown Specialty Clinic",
-    "availability": [ "2025-11-10T08:00:00Z", "2025-11-11T09:00:00Z", "2025-11-12T08:00:00Z" ]
+    "availability": [
+      "2025-11-10T08:00:00Z",
+      "2025-11-11T09:00:00Z",
+      "2025-11-12T08:00:00Z"
+    ]
   },
   {
     "id": 302,
     "name": "Anna Patel, DPT",
     "specialty": "Physiotherapist",
     "location": "CityView Health",
-    "availability": [ "2025-11-13T10:30:00Z", "2025-11-14T14:30:00Z" ]
+    "availability": [
+      "2025-11-13T10:30:00Z",
+      "2025-11-14T14:30:00Z"
+    ]
   },
   {
     "id": 401,
     "name": "Dr. Ben Carter",
     "specialty": "Neurologist",
     "location": "Downtown Medical Center",
-    "availability": [ "2025-11-11T11:00:00Z", "2025-11-12T16:00:00Z" ]
+    "availability": [
+      "2025-11-11T11:00:00Z",
+      "2025-11-12T16:00:00Z"
+    ]
+  },
+  {
+    "id": 501,
+    "name": "Dr. Evelyn Reed",
+    "specialty": "Cardiologist",
+    "location": "HeartCare Institute",
+    "availability": [
+      "2025-11-17T08:30:00Z",
+      "2025-11-17T11:00:00Z",
+      "2025-11-19T13:45:00Z"
+    ]
+  },
+  {
+    "id": 502,
+    "name": "Dr. Marcus Cole",
+    "specialty": "Cardiologist",
+    "location": "CityView Health",
+    "availability": [
+      "2025-11-18T09:15:00Z",
+      "2025-11-20T14:30:00Z"
+    ]
+  },
+  {
+    "id": 601,
+    "name": "Dr. Aanya Sharma",
+    "specialty": "Dermatologist",
+    "location": "Uptown Specialty Clinic",
+    "availability": [
+      "2025-11-10T14:00:00Z",
+      "2025-11-10T14:20:00Z",
+      "2025-11-10T14:40:00Z",
+      "2025-11-10T15:00:00Z"
+    ]
+  },
+  {
+    "id": 602,
+    "name": "Dr. Leo Harris",
+    "specialty": "Dermatologist",
+    "location": "SkinDeep Clinic",
+    "availability": [
+      "2025-11-21T09:00:00Z"
+    ]
+  },
+  {
+    "id": 603,
+    "name": "Dr. Chloe White",
+    "specialty": "Dermatologist",
+    "location": "Downtown Medical Center",
+    "availability": []
+  },
+  {
+    "id": 701,
+    "name": "Dr. Raj Singh",
+    "specialty": "Gastroenterologist",
+    "location": "Digestive Health Center",
+    "availability": [
+      "2025-11-13T11:15:00Z",
+      "2025-11-15T10:00:00Z"
+    ]
+  },
+  {
+    "id": 702,
+    "name": "Dr. Kenji Tanaka",
+    "specialty": "Gastroenterologist",
+    "location": "CityView Health",
+    "availability": [
+      "2025-11-14T09:00:00Z"
+    ]
+  },
+  {
+    "id": 801,
+    "name": "Dr. Emily Wilson",
+    "specialty": "General Practitioner",
+    "location": "Community Care Clinic",
+    "availability": [
+      "2025-11-08T09:00:00Z",
+      "2025-11-08T09:15:00Z",
+      "2025-11-08T09:30:00Z",
+      "2025-11-08T09:45:00Z"
+    ]
+  },
+  {
+    "id": 901,
+    "name": "Dr. Lisa Ray",
+    "specialty": "Otolaryngologist (ENT)",
+    "location": "Sino-Nasal Institute",
+    "availability": [
+      "2025-11-12T15:00:00Z",
+      "2025-11-13T09:30:00Z"
+    ]
+  },
+  {
+    "id": 902,
+    "name": "Dr. Robert Moss",
+    "specialty": "Otolaryngologist (ENT)",
+    "location": "Uptown Specialty Clinic",
+    "availability": [
+      "2025-11-18T10:00:00Z"
+    ]
+  },
+  {
+    "id": 1001,
+    "name": "Dr. Sandra Lee",
+    "specialty": "Endocrinologist",
+    "location": "Metabolic Health Group",
+    "availability": [
+      "2025-11-19T09:00:00Z",
+      "2025-11-21T10:30:00Z"
+    ]
+  },
+  {
+    "id": 1101,
+    "name": "Dr. Mark Davis",
+    "specialty": "Ophthalmologist",
+    "location": "ClearView Eye Center",
+    "availability": [
+      "2025-11-10T09:45:00Z",
+      "2025-11-10T10:15:00Z"
+    ]
   }
 ]

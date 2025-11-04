@@ -1,0 +1,72 @@
+/* Plain CSS for the provider card */
+:host {
+  display: block;
+}
+
+.provider-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+  .provider-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .provider-card h3 {
+    margin: 0 0 4px;
+    color: #333;
+  }
+
+.specialty {
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: #005a9c; /* A professional blue */
+}
+
+.location {
+  margin: 0 0 16px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.availability strong {
+  font-size: 0.95em;
+  color: #444;
+}
+
+.availability ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.availability li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+  .availability li:last-child {
+    border-bottom: none;
+  }
+
+.book-btn {
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+  .book-btn:hover {
+    background-color: #0056b3;
+  }

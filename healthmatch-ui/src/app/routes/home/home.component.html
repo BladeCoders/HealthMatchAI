@@ -1,0 +1,67 @@
+<div class="home-container">
+
+  <div class="search-box">
+    <h2>Find the right care, faster.</h2>
+    <p>Describe your symptoms in plain language and let our AI guide you.</p>
+    <div class="input-group">
+      <textarea rows="3"
+                placeholder="e.g., 'I have a sharp pain in my left knee when I walk up stairs...'"
+                [value]="symptomInput()"
+                (input)="symptomInput.set($any($event.target).value)"
+                (keyup.enter)="onSearch()"></textarea>
+      <div class="button-group">
+        <button class="primary" (click)="onSearch()" [disabled]="healthService.isLoading()">
+          @if (healthService.isLoading()) {
+          <span class="loader"></span>
+          } @else {
+          Find Care
+          }
+        </button>
+        <button class="secondary" (click)="onClear()" [disabled]="healthService.isLoading()">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  @if (healthService.error(); as error) {
+  <div class="error-box">
+    <strong>Error:</strong> {{ error }}
+    <p>Please ensure the backend API server is running and your API key is valid.</p>
+  </div>
+  }
+
+  <div class="results-container">
+
+    @if (healthService.recommendation(); as rec) {
+    <div class="recommendation-section">
+      <h3>AI Recommended Specialties</h3>
+      <p class="reasoning">"{{ rec.reasoning }}"</p>
+      <div class="specialty-tags">
+        @for (spec of rec.specialties; track spec) {
+        <button class="specialty-tag"
+                (click)="onSelectSpecialty(spec)"
+                [class.selected]="healthService.selectedSpecialty() === spec"
+                [disabled]="healthService.isLoading()">
+          {{ spec }}
+        </button>
+        }
+      </div>
+    </div>
+    }
+
+    @if (healthService.providers(); as providerList) {
+    <div class="provider-section">
+      <h3>Available Providers for "{{ healthService.selectedSpecialty() }}"</h3>
+      @if (providerList.length === 0) {
+      <p>No providers found in our mock database for this specialty.</p>
+      } @else {
+      <div class="provider-list">
+        @for (provider of providerList; track provider.id) {
+        <app-provider-card [provider]="provider" />
+        }
+      </div>
+      }
+    </div>
+    }
+
+  </div>
+</div>

@@ -1,0 +1,32 @@
+/* Global styles for the app shell */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #003a6c; /* A deep, professional blue */
+  color: white;
+  padding: 16px 32px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+  header h1 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+
+main {
+  flex-grow: 1; /* Makes the main content area fill the space */
+  padding-bottom: 32px;
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  background-color: #f4f4f4;
+  color: #777;
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto; /* Pushes footer to the bottom */
+}
