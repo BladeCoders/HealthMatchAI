@@ -162,3 +162,92 @@ button {
     transform: rotate(360deg);
   }
 }
+
+/* --- STYLES for Voice Button Inside Textarea --- */
+
+/* 1. This container will act as the anchor for our absolute button */
+.textarea-container {
+  position: relative;
+  width: 100%;
+}
+
+  /* 2. We add padding to the RIGHT of the textarea so text doesn't flow under the button */
+  .textarea-container textarea {
+    padding-right: 55px; /* Increased space for the larger button */
+  }
+
+/* 3. This is the style for the button INSIDE the textarea */
+.voice-btn-inside {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  /* Make it circular and blue */
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid #007aff; /* Blue border */
+  background-color: #007aff; /* Blue background */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* White icon for contrast */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+  .voice-btn-inside:hover:not(:disabled) {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+    color: white; /* Keep icon white on hover */
+  }
+
+  /* Adjust SVG size within the larger button if needed (default 20px is usually fine) */
+  .voice-btn-inside svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  /* 4. This is the 'listening' state for the button */
+  .voice-btn-inside.listening {
+    color: white; /* Icon remains white */
+    background-color: #d9534f; /* Still red when actively listening */
+    border-color: #d9534f;
+    animation: pulse 1.5s infinite;
+  }
+
+/* 5. This will pulse the textarea border ONLY when listening */
+textarea.listening {
+  animation: pulse-placeholder 1.5s infinite;
+}
+
+/* Pulse animation keyframes */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(217, 83, 79, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(217, 83, 79, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(217, 83, 79, 0);
+  }
+}
+
+@keyframes pulse-placeholder {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 122, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0);
+  }
+}
