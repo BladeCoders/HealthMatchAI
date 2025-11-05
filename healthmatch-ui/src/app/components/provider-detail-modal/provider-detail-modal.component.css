@@ -1,0 +1,244 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Large, clean, light modal */
+.modal-content {
+  background: #f9faff; /* Very light, clean background */
+  border-radius: 16px;
+  padding: 0;
+  color: #1a0b3f;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: zoomIn 0.3s ease;
+  overflow: hidden;
+  max-height: 80vh;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 32px;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.provider-image-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e0e0e0;
+  flex-shrink: 0;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.dummy-image {
+  width: 100%;
+  height: 100%;
+  color: #aaa;
+}
+.header-info {
+  flex-grow: 1;
+}
+.provider-name {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #1a0b3f;
+  margin: 0;
+}
+.provider-specialty {
+  font-size: 1.1em;
+  color: #0056b3;
+  margin: 4px 0 0;
+  font-weight: 500;
+}
+.close-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 2.5em;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+  align-self: flex-start;
+}
+.close-btn:hover {
+  color: #111;
+}
+
+/* --- NEW: Ratings in Modal --- */
+.ratings {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.stars {
+  display: flex;
+  color: #f39c12; /* Gold color */
+}
+.stars svg {
+  width: 18px;
+  height: 18px;
+}
+.rating-text {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #555;
+}
+
+.modal-body {
+  padding: 24px 32px 32px;
+  overflow-y: auto;
+  max-height: calc(80vh - 150px); /* Adjusted for taller header */
+}
+
+/* Section titles with icons */
+.section-title {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #1a0b3f;
+  margin: 16px 0 12px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title svg {
+  width: 20px;
+  height: 20px;
+  fill: #6e48ff;
+}
+.detail-section:first-child .section-title {
+  margin-top: 0;
+}
+
+/* Affiliations */
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pill {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #e0e0e0;
+  color: #333;
+  border-radius: 999px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* Location Card */
+.location-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+}
+.location-name {
+  font-size: 1.05em;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+.location-name svg {
+  width: 20px;
+  height: 20px;
+  fill: #007aff;
+  flex-shrink: 0;
+}
+
+/* Fancy Slot List */
+.slot-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.slot-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s;
+}
+.slot-row:hover {
+  background: #f0f7ff;
+  border-color: #007aff;
+}
+.slot-time {
+  color: #1a0b3f;
+  font-weight: 500;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.slot-time svg {
+  width: 20px;
+  height: 20px;
+  fill: #007aff;
+  flex-shrink: 0;
+}
+.no-slots {
+  color: #555;
+  font-style: italic;
+  margin-top: 12px;
+}
+
+.book-btn {
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.book-btn svg {
+  width: 16px;
+  height: 16px;
+}
+.book-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

@@ -1,0 +1,21 @@
+<div class="custom-select-wrapper">
+  
+  <button class="select-display" (click)="toggleDropdown()">
+    <span class="label">Filter by Location:</span>
+    <span class="selected-value">{{ getLabel(selectedLocation()) }}</span>
+    <svg class="chevron" [class.open]="isDropdownOpen()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7 10l5 5 5-5H7z"/></svg>
+  </button>
+
+  @if (isDropdownOpen()) {
+    <ul class="select-options">
+      @for (location of locations; track location) {
+        <li 
+          (click)="selectLocation(location)" 
+          [class.selected]="location === selectedLocation()"
+        >
+          {{ getLabel(location) }}
+        </li>
+      }
+    </ul>
+  }
+</div>

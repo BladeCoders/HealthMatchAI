@@ -1,32 +1,160 @@
-/* Global styles for the app shell */
 :host {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* NEW: Prominent Header Style */
 header {
-  background-color: #003a6c; /* A deep, professional blue */
-  color: white;
-  padding: 16px 32px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* Use a subtle, professional gradient or solid color */
+  background: linear-gradient(90deg, #1a0b3f 0%, #3d2c70 100%);
+  color: #ffffff; /* White text for contrast */
+  padding: 15px 40px; /* More padding */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-  header h1 {
-    margin: 0;
-    font-size: 1.5em;
-  }
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NEW: Updated Logo Icon Styling */
+.header-logo {
+  width: 36px; /* Slightly larger */
+  height: 36px;
+  color: #00e0ff; /* Bright, clean accent color for the icon */
+  filter: drop-shadow(0 0 5px rgba(0, 224, 255, 0.4)); /* Glow effect */
+}
+
+.header-title {
+  font-size: 1.6em; /* Slightly larger title */
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* More spacing for links */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  font-weight: 500;
+  padding: 10px 20px; /* More padding */
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden; /* For hover effect */
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle white background on hover */
+}
+
+/* Active link style */
+.nav-link.active {
+  color: #00e0ff; /* Active link uses accent color */
+  font-weight: 600;
+  background-color: rgba(0, 224, 255, 0.1);
+}
 
 main {
-  flex-grow: 1; /* Makes the main content area fill the space */
-  padding-bottom: 32px;
+  flex-grow: 1;
+  background-color: transparent;
 }
 
+/* Footer (no changes, but keeping for completeness) */
 footer {
-  text-align: center;
-  padding: 24px;
-  background-color: #f4f4f4;
-  color: #777;
-  border-top: 1px solid #e0e0e0;
-  margin-top: auto; /* Pushes footer to the bottom */
+  text-align: left;
+  padding: 40px 32px;
+  background-color: #1a0b3f; /* Deep purple */
+  color: rgba(255, 255, 255, 0.7); /* Light text */
+  border-top: none;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.footer-section {
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.footer-section p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-section a:hover {
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icons a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+/* Responsive adjustments for header */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .nav-links {
+    margin-top: 15px;
+    gap: 10px;
+  }
+  .header-title {
+    font-size: 1.4em;
+  }
 }

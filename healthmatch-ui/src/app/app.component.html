@@ -1,5 +1,14 @@
 <header>
-  <h1>{{ title }}</h1>
+  <a class="logo-container" routerLink="/">
+    <svg class="header-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2c-4.97 0-9 4.03-9 9 0 3.75 2.33 6.94 5.6 8.35L12 22l3.4-2.65c3.27-1.41 5.6-4.6 5.6-8.35 0-4.97-4.03-9-9-9zm.5 13H11v-3.5H7.5V10h3.5V6.5h1.5V10h3.5v1.5H12.5V15z"/>
+    </svg>
+    <span class="header-title">{{ title }}</span>
+  </a>
+  <nav class="nav-links">
+    <a routerLink="/" class="nav-link" [class.active]="currentUrl() === '/'">Home</a>
+    <a routerLink="/home" class="nav-link" [class.active]="currentUrl() === '/home'">Find Care</a>
+  </nav>
 </header>
 
 <main>
@@ -7,5 +16,29 @@
 </main>
 
 <footer>
-  <p>CODEVibe 2025 Hackathon MVP</p>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>CODEVibe 2025 MVP</h4>
+      <p>BladeCoders Solution</p>
+    </div>
+    <div class="footer-section">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#" title="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.294h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+        </a>
+        <a href="#" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-.422.724-.665 1.58-.665 2.503 0 1.791.912 3.372 2.29 4.298-.846-.028-1.643-.26-2.333-.646v.052c0 2.503 1.78 4.59 4.139 5.062-.432.118-.886.181-1.352.181-.331 0-.65-.03-.96-.09 1.07 2.296 3.033 3.49 5.39 3.49-1.88 1.468-4.239 2.24-6.804 2.24-.44 0-.877-.026-1.305-.076 2.43 1.56 5.253 2.345 8.25 2.345 8.247 0 13.21-6.878 12.53-13.688.877-.633 1.64-1.42 2.24-2.327z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>

@@ -1,0 +1,137 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Light glassmorphism modal content */
+.modal-content {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 24px 32px;
+  color: #1a0b3f; /* Dark text */
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: zoomIn 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #888; /* Dark icon */
+  font-size: 2.5em;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+.close-btn:hover {
+  color: #111;
+}
+
+.modal-body {
+  text-align: center;
+  margin-top: -20px;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #28a745;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+}
+.success-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.modal-body h2 {
+  text-align: center;
+  font-size: 1.8em;
+  color: #1a0b3f;
+  margin-bottom: 12px;
+}
+
+.modal-body p {
+  text-align: center;
+  color: #333;
+  font-size: 1.05em;
+  margin: 4px 0;
+}
+
+.provider-name {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #0056b3;
+  margin: 16px 0 4px !important;
+}
+
+.slot-time {
+  font-weight: 500;
+  font-size: 1em !important;
+  color: #1a0b3f;
+  margin-bottom: 24px !important;
+}
+
+/* NEW: Styles for icon button */
+.primary-btn {
+  padding: 12px 28px;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #007aff;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+  margin: 16px auto 0;
+  /* Flex for icon */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.primary-btn svg {
+  width: 18px;
+  height: 18px;
+}
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

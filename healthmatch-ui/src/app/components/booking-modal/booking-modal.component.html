@@ -1,0 +1,22 @@
+<div class="modal-overlay" (click)="onClose()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <button class="close-btn" (click)="onClose()" title="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      </div>
+      <h2>Appointment Booked!</h2>
+      <p>Congratulations! You're all set for your (demo) appointment with:</p>
+      <p class="provider-name">{{ data?.providerName }}</p>
+      <p class="slot-time">
+        {{ data?.slot | date:'fullDate' }} at {{ data?.slot | date:'shortTime' }}
+      </p>
+      <button class="primary-btn" (click)="onClose()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        Awesome!
+      </button>
+    </div>
+  </div>
+</div>

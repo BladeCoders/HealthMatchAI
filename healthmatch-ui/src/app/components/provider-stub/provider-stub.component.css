@@ -1,0 +1,246 @@
+:host {
+  display: block;
+}
+
+/* Main card */
+.stub-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+.stub-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* --- Top Section --- */
+.provider-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 24px;
+}
+
+.provider-info {
+  display: flex;
+  gap: 20px;
+  flex: 1 1 400px;
+}
+
+.provider-image-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e0e0e0;
+  flex-shrink: 0;
+}
+.dummy-image {
+  width: 100%;
+  height: 100%;
+  color: #aaa;
+}
+
+.info-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.name {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #1a0b3f;
+  margin: 0;
+}
+
+/* NEW: Specialty Pill Style */
+.specialty-pill {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #0056b3; /* Dark blue text */
+  background: #e6f0ff; /* Light blue background */
+  border: 1px solid #b3d4ff; /* Light blue border */
+  border-radius: 999px;
+  padding: 4px 12px;
+  display: inline-block; /* Make it a block */
+  align-self: flex-start; /* Don't stretch */
+}
+
+/* Ratings Style */
+.ratings {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+.stars {
+  display: flex;
+  color: #f39c12; /* Gold color */
+}
+.stars svg {
+  width: 18px;
+  height: 18px;
+}
+.rating-text {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Status Tags Style */
+.status-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+.status-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.status-tag svg {
+  width: 16px;
+  height: 16px;
+}
+.status-tag.online {
+  color: #27ae60; /* Green */
+}
+.status-tag.not-accepting {
+  color: #c0392b; /* Red */
+}
+
+/* Action Button Style */
+.provider-actions {
+  flex: 1 1 200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.schedule-btn {
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #007aff;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.schedule-btn svg {
+  width: 18px;
+  height: 18px;
+}
+.schedule-btn:hover {
+  background-color: #0056b3;
+}
+
+/* --- Bottom Section --- */
+.provider-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  background: #f9faff;
+  border-top: 1px solid #e0e0e0;
+  padding: 24px;
+}
+
+/* NEW: Detail Title Style (for both) */
+.detail-title {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #555;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* Added for icon */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.detail-title svg {
+  width: 18px;
+  height: 18px;
+  fill: #555;
+}
+
+.detail-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.detail-list li {
+  font-size: 0.95em;
+  color: #1a0b3f;
+}
+
+/* Location Specifics */
+.locations-list .location-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.locations-list svg {
+  width: 20px;
+  height: 20px;
+  fill: #007aff;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.location-info {
+  display: flex;
+  flex-direction: column;
+}
+.location-info strong {
+  font-weight: 600;
+  color: #1a0b3f;
+}
+.location-info p {
+  margin: 2px 0 0;
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.5;
+}
+.get-directions {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #007aff;
+  text-decoration: none;
+  margin-top: 8px;
+  display: inline-block;
+}
+.get-directions:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .provider-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .provider-actions {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 16px;
+  }
+  .provider-details {
+    grid-template-columns: 1fr;
+  }
+}

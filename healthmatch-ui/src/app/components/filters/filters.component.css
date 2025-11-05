@@ -1,0 +1,100 @@
+:host {
+  display: block;
+}
+
+/* Main wrapper, must be relative for absolute positioning */
+.custom-select-wrapper {
+  position: relative;
+  font-family: inherit;
+  width: 250px; /* Set a fixed width */
+}
+
+/* The visible part of the dropdown */
+.select-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  background: #ffffff;
+  color: #1a0b3f;
+  font-family: inherit;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.select-display:hover {
+  border-color: #a0a0a0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.label {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #555;
+  margin-right: 8px;
+}
+.selected-value {
+  font-weight: 600;
+  color: #1a0b3f;
+}
+
+/* The dropdown arrow */
+.chevron {
+  width: 24px;
+  height: 24px;
+  fill: #888;
+  transition: transform 0.2s ease;
+}
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+/* The floating list of options */
+.select-options {
+  position: absolute;
+  top: calc(100% + 4px); /* 4px gap */
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  z-index: 100;
+  list-style: none;
+  padding: 8px;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.15s ease-out;
+}
+
+.select-options li {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.select-options li:hover {
+  background: #f0f7ff;
+  color: #0056b3;
+}
+.select-options li.selected {
+  background: #007aff;
+  color: white;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
